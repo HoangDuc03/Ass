@@ -1,8 +1,51 @@
-﻿@{
+﻿
+@{
     ViewData["Title"] = "Home Page";
 }
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    th, td {
+        border: 1px solid #ddd;
+        padding: 3px;
+        max-width: 150px; /* Giới hạn chiều rộng */
+        white-space: nowrap; /* Không xuống dòng */
+        overflow: hidden; /* Ẩn nội dung bị tràn */
+        text-overflow: ellipsis; /* Hiển thị dấu "..." */
+    }
+
+    /*td:hover {
+                overflow: visible;
+                white-space: normal;
+                word-wrap: break-word;
+                background-color: #f9f9f9;
+        }*/
+</style>
+
+<div>
+    <h1>
+        New Article
+    </h1>
+    <div class="text-center">
+        <table border="1px">
+            <tr>
+                <td><b>NewsTitle</b></td>
+                <td><b>Headline</b></td>
+                <td><b>Category</b></td>
+                <td><b>CreatedBy</b></td>
+            </tr>
+            @foreach (var i in Model)
+            {
+                <tr>
+                    <td><a class="nav-link text-dark" asp-action="Detail" asp-route-id="@i.NewsArticleId">@i.NewsTitle</a></td>
+                    <td>@i.Headline</td>
+                    <td>@i.Category.CategoryName</td>
+                    <td>@i.CreatedBy.AccountName</td>
+                </tr>
+            }
+        </table>
+    </div>
 </div>

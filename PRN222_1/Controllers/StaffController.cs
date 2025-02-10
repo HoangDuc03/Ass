@@ -125,7 +125,7 @@ namespace PRN222_1.Controllers
                 article.CategoryId = model.CategoryId;
                 article.UpdatedById = model.UpdatedById;
                 article.ModifiedDate = DateTime.Now;
-
+                article.UpdatedById = short.Parse(HttpContext.Session.GetString("Account"));
                 article.Tags.Clear();
 
 

@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Detail";
+}
+@model NewsArticle
+<div>
+    <button style="width:100px;height :40px; align-items:center ">
+        <a asp-action="Index" asp-controller="Home" class="nav-link text-dark">Back</a>
+    </button>
+    <p>@Model.NewsTitle</p>
+</div>
+<div>
+    <h1>@Model.Headline</h1>
+</div>
+<div>
+
+</div>
+<div>
+    <p>
+        @Model.NewsContent
+    </p>
+</div>
