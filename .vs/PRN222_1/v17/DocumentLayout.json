@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|c:\\users\\admin\\desktop\\assignment\\prn222_1\\prn222_1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|solutionrelative:prn222_1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|c:\\users\\admin\\desktop\\assignment\\prn222_1\\prn222_1\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|solutionrelative:prn222_1\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|c:\\users\\admin\\desktop\\assignment\\prn222_1\\prn222_1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|solutionrelative:prn222_1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|c:\\users\\admin\\desktop\\assignment\\prn222_1\\prn222_1\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|solutionrelative:prn222_1\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|c:\\users\\admin\\desktop\\assignment\\prn222_1\\prn222_1\\views\\home\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|solutionrelative:prn222_1\\views\\home\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|c:\\users\\admin\\desktop\\assignment\\prn222_1\\prn222_1\\controllers\\staffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|solutionrelative:prn222_1\\controllers\\staffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,40 +31,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "PRN222_1\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "PRN222_1\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAdAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Views\\Category\\Index.cshtml",
+              "RelativeDocumentMoniker": "PRN222_1\\Views\\Category\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Views\\Category\\Index.cshtml",
+              "RelativeToolTip": "PRN222_1\\Views\\Category\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACEAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-10T04:06:33.397Z",
+              "WhenOpened": "2025-02-10T08:54:39.883Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Detail.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Views\\Home\\Detail.cshtml",
-              "RelativeDocumentMoniker": "PRN222_1\\Views\\Home\\Detail.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Views\\Home\\Detail.cshtml",
-              "RelativeToolTip": "PRN222_1\\Views\\Home\\Detail.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-10T03:50:34.176Z",
+              "Title": "StaffController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Controllers\\StaffController.cs",
+              "RelativeDocumentMoniker": "PRN222_1\\Controllers\\StaffController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Controllers\\StaffController.cs",
+              "RelativeToolTip": "PRN222_1\\Controllers\\StaffController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAgwDYAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T08:50:27.816Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "PRN222_1\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "PRN222_1\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACoAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-10T03:44:33.059Z",
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "PRN222_1\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "PRN222_1\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T08:50:24.046Z",
               "EditorCaption": ""
             }
           ]

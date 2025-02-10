@@ -28,13 +28,16 @@
                         @if(user != null && user != "2" && user != "1")
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Index">Admin</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Index">Account Management</a>
                             </li>
                         }
                         @if (user != null && user.Equals("1"))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Staff" asp-action="Index">Staff</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Staff" asp-action="Index">New Article Management</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Category" asp-action="Index">Category Management</a>
                             </li>
                         }
                         @if (user == null)
@@ -49,6 +52,9 @@
                                 <a class="nav-link text-dark" asp-controller="Identity" asp-action="Logout">Logout</a>
                             </li>
                         }
+                        
+
+                        
                     </ul>
                 </div>
             </div>

@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Category Page";
+}
+@model List<Category>
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 3px;
+        max-width: 150px; /* Giới hạn chiều rộng */
+        white-space: nowrap; /* Không xuống dòng */
+        overflow: hidden; /* Ẩn nội dung bị tràn */
+        text-overflow: ellipsis; /* Hiển thị dấu "..." */
+    }
+
+    /*td:hover {
+                overflow: visible;
+                white-space: normal;
+                word-wrap: break-word;
+                background-color: #f9f9f9;
+        }*/
+</style>
+<div>
+    <h1>Manage Category information.</h1>
+</div>
+<div style="margin-bottom: 10px">
+    <button type="button" class="btn btn-primary"><a class="nav-link text-dark" asp-controller="Category" asp-action="Create">Create new</a></button>
+</div>
+<div class="text-center">
+    <p>@TempData["Message"]</p>
+    <table border="1">
+        <tr>
+            <td>CategoryID</td>
+            <td>CategoryName</td>
+            <td>CategoryDesciption</td>
+            <td>ParentCategory</td>
+            <td>IsActive</td>
+            <td>Action</td>
+        </tr>
+        @foreach(var i in Model)
+        {
+            <tr>
+                <td>@i.CategoryId</td>
+                <td>@i.CategoryName</td>
+                <td>@i.CategoryDesciption</td>
+                <td>@i.ParentCategory.CategoryName</td>
+                <td>@i.IsActive</td>
+                <td style="display: flex"><a class="nav-link text-dark" asp-controller="Category" asp-action="Edit" asp-route-id=@i.CategoryId>Edit</a> <a class="nav-link text-dark" asp-controller="Category" asp-action="Delete" asp-route-id=@i.CategoryId>Delete</a></td>
+            </tr>
+        }
+    </table>
+</div>

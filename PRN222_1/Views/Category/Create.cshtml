@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Category Page";
+    
+}
+@model Category
+
+<div>
+    <div>
+        <h1>Create new Category</h1>
+    </div>
+    <div>
+        <p>@ViewBag.Message</p>
+        <form action="Create" method="post">
+            <div>
+                <span>CategoryName: </span>
+                <input type="text" asp-for="CategoryName" />
+            </div>
+            <div>
+                <span>CategoryDesciption: </span>
+                <input type="text" asp-for="CategoryDesciption" />
+            </div>
+            <div>
+                <span>ParentCategory: </span>
+                <select asp-for="ParentCategoryId">
+                    @foreach(var i in ViewBag.cate)
+                    {
+                        <option value="@i.CategoryId">@i.CategoryName</option>
+                    }
+                </select>
+            </div>
+            <div>
+                <span>IsActive: </span>
+                <div class="form-group">
+                    <input type="radio" name="Status" value="1" <span>Active</span>
+                    <input type="radio" name="Status" value="0" <span>Inactive</span>
+                    <!--   -->
+                </div>
+            </div>
+            <button type="submit" class="">Submit</button>
+        </form>
+    </div>
+    <div style="margin-top: 20px; width: 350px; height :20px">
+        <button>
+            <a asp-action="Index" asp-controller="Category" class="nav-link text-dark">Back to List Category</a>
+        </button>
+    </div>
+</div>

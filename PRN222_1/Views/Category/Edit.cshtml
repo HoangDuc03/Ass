@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Admin Page";
+}
+@model Category
+<div>
+    <div>
+        <h1>Edit Category</h1>
+    </div>
+    <div>
+        <p>@ViewBag.Message</p>
+        <form asp-action="Edit" method="post">
+            <div>
+                <span>CategoryName: </span>
+                <input type="text" asp-for="@Model.CategoryName" />
+            </div>
+            <div>
+                <span>CategoryDesciption: </span>
+                <input type="text" asp-for="@Model.CategoryDesciption" />
+            </div>
+            <div>
+                <span>ParentCategory: </span>
+                <select asp-for="@Model.ParentCategoryId">
+                    @foreach (var i in ViewBag.cate)
+                    {
+                        <option value="@i.CategoryId">@i.CategoryName</option>
+                    }
+                </select>
+            </div>
+            <div>
+                <span>IsActive: </span>
+                <div class="form-group">
+                    @if(Model.IsActive == true)
+                    {
+                        <input type="radio" name="Status" value="1" checked> <span>Active</span>
+                        <input type="radio" name="Status" value="0" > <span>Inactive</span>
+                    }
+                    else
+                    {
+                        <input type="radio" name="Status" value="1" /> <span>Active</span>
+                        <input type="radio" name="Status" value="0" checked/><span>Inactive</span>
+                    }
+                    
+                    <!--   -->
+                </div>
+            </div>
+            <button type="submit" class="">Submit</button>
+        </form>
+    </div>
+    <div style="margin-top: 20px; width: 350px; height :20px">
+        <button>
+            <a asp-action="Index" asp-controller="Category" class="nav-link text-dark">Back to List Category</a>
+        </button>
+    </div>
+</div>
