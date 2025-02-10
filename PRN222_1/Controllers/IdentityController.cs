@@ -26,7 +26,23 @@ namespace PRN222_1.Controllers
                 return Redirect(Url.Action("Index", "Home"));
             }
             else
-                return View("Index");
+            {
+                var builder = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+                IConfiguration config = builder.Build();
+
+                string adminMail = config["Admin:Mail"];
+                string adminPassword = config["Admin:Password"];
+                if (model.AccountEmail.Trim().Equals(adminMail) && model.AccountPassword.Trim().Equals(adminPassword))
+                {
+                    HttpContext.Session.SetString("Account","0");
+                    return Redirect(Url.Action("Index", "Home"));
+                }
+                else
+                {
+                    return View("Index");
+                }
+            }   
         }
 
 		public IActionResult Logout()

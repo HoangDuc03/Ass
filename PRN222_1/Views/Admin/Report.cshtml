@@ -1,0 +1,83 @@
+﻿<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 3px;
+        max-width: 150px; /* Giới hạn chiều rộng */
+        white-space: nowrap; /* Không xuống dòng */
+        overflow: hidden; /* Ẩn nội dung bị tràn */
+        text-overflow: ellipsis; /* Hiển thị dấu "..." */
+    }
+
+    td:hover {
+                overflow: visible;
+                white-space: normal;
+                word-wrap: break-word;
+                background-color: #f9f9f9;
+        }
+</style>
+<div>
+	<h1>Create a report</h1>
+	<form asp-action="Report" method="post">
+		<div>
+			<label style="width: 50px">From</label>
+			<input type="date" id="toDate" name="From">
+		</div>
+
+		<div>
+			<label style="width: 50px">To</label>
+			<input type="date" id="toDate" name="To">
+		</div>
+		<div>
+			<button type="submit">Submit</button>
+		</div>
+	</form>
+</div>
+<hr />
+<p>@ViewBag.Message</p>
+@if (ViewBag.Report != null){
+<div>
+    <div class="text-center">
+        <table border="1px">
+            <tr>
+                <td>NewsArticleId</td>
+                <td>NewsTitle</td>
+                <td>Headline</td>
+                <td>NewsContent</td>
+                <td>NewsSource</td>
+                <td>NewsStatus</td>
+                <td>CategoryId</td>
+                <td>Category</td>
+                <td>CreatedById</td>
+                <td>CreatedDate</td>
+                <td>UpdatedById</td>
+                <td>ModifiedDate</td>
+                <td>CreatedBy</td>
+            </tr>
+                @foreach (var i in Model)
+                {
+                    <tr>
+                        <td>@i.NewsArticleId</td>
+                        <td>@i.NewsTitle</td>
+                        <td>@i.Headline</td>
+                        <td>@i.NewsContent</td>
+                        <td>@i.NewsSource</td>
+                        <td>@i.NewsStatus</td>
+                        <td>@i.CategoryId</td>
+                        <td>@i.Category.CategoryName</td>
+                        <td>@i.CreatedById</td>
+                        <td>@i.CreatedDate</td>
+                        <td>@i.UpdatedById</td>
+                        <td>@i.ModifiedDate</td>
+                        <td>@i.CreatedBy.AccountName</td>
+                    </tr>
+                }
+        </table>
+    </div>
+
+</div>
+}

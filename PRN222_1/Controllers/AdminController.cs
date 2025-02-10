@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using PRN222_1.Models;
 using System;
 using System.Collections.Generic;
@@ -33,7 +34,17 @@ namespace PRN222_1.Controllers
         {
             try
             {
-                model.AccountId = (short)(context.SystemAccounts.ToList().Count() + 1); 
+                model.AccountId = (short)(context.SystemAccounts.ToList().Count() + 1);
+                while(true)
+                {
+                    var check = context.SystemAccounts.Find(model.AccountId);
+                    if (check != null)
+                        model.AccountId += 1;
+                    else
+                    {
+                        break;
+                    }
+                }
                 await context.SystemAccounts.AddAsync(model);
                 await context.SaveChangesAsync();
                 this.ViewBag.Message = "New account created successfully.";
@@ -97,6 +108,35 @@ namespace PRN222_1.Controllers
             {
                 return View();
             }
+        }
+
+        public ActionResult Report()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        //[ValidateAntiForgeryToken]
+        public async Task<ActionResult> Report(DateTime? From, DateTime? To)
+        {
+            if(From== null || To == null)
+            {
+                this.ViewBag.Message = "Start and end times cannot be empty";
+                return View();
+            }
+            if (From > To)
+            {
+                this.ViewBag.Message = "start time cannot be greater than end time";
+                return View();
+            }
+            var reportData = context.NewsArticles
+        .Include(n => n.Category)
+        .Include(n => n.CreatedBy)
+        .Where(n => n.CreatedDate >= From && n.CreatedDate <= To).OrderByDescending(x => x.CreatedDate)
+        .ToList();
+
+            ViewBag.Report = reportData;
+            return View(reportData);
         }
     }
 }

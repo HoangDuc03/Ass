@@ -1,18 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\",
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Documents\\GitHub\\Ass\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|c:\\users\\admin\\desktop\\assignment\\prn222_1\\prn222_1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|solutionrelative:prn222_1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|c:\\users\\admin\\desktop\\assignment\\prn222_1\\prn222_1\\views\\category\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|solutionrelative:prn222_1\\views\\category\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|c:\\users\\admin\\desktop\\assignment\\prn222_1\\prn222_1\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|solutionrelative:prn222_1\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|c:\\users\\admin\\documents\\github\\ass\\prn222_1\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|solutionrelative:prn222_1\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,40 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "PRN222_1\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "PRN222_1\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACQAAACLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-10T07:55:17.2Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Views\\Category\\Edit.cshtml",
-              "RelativeDocumentMoniker": "PRN222_1\\Views\\Category\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Views\\Category\\Edit.cshtml",
-              "RelativeToolTip": "PRN222_1\\Views\\Category\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-10T07:51:45.161Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "PRN222_1\\Controllers\\CategoryController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "PRN222_1\\Controllers\\CategoryController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAQwC4AAAAMAAAAAAAAAA==",
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\Ass\\PRN222_1\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "PRN222_1\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\Ass\\PRN222_1\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "PRN222_1\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAuwCwAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T07:22:28.5Z",
+              "WhenOpened": "2025-02-10T16:04:32.059Z",
               "EditorCaption": ""
             }
           ]

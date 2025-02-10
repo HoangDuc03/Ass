@@ -52,7 +52,7 @@ namespace PRN222_1.Controllers
         {
             try
             {
-                model.NewsArticleId = (context.NewsArticles.ToList().Count() + 1).ToString();
+                model.NewsArticleId = "Na" + (context.NewsArticles.ToList().Count() + 1).ToString();
                 model.CreatedDate = DateTime.Now;
                 model.NewsStatus = Status == 1 ? true : false;
                 foreach (var i in Tags)
