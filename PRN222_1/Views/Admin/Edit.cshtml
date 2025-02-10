@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Admin Page";
+}
+@model SystemAccount
+<div>
+    <h1>
+        Edit Account
+    </h1>
+</div>
+<div>
+    <p>@ViewBag.Message</p>
+</div>
+<div>
+    <form asp-action="Edit" method="post">
+        <div>
+            <span>AccountName: </span>
+            <input type="text" asp-for=@Model.AccountName />
+        </div>
+        <div>
+            <span>AccountEmail: </span>
+            <input type="text" asp-for=@Model.AccountEmail />
+        </div>
+        <div>
+            <span>AccountRole: </span>
+            <select asp-for="AccountRole">
+                @if (Model.AccountRole == 1)
+                {
+                    <option value="1" selected>Staff</option>
+                    <option value="2">Lecturer</option>
+                }
+                else
+                {
+                    <option value="1">Staff</option>
+                    <option value="2" selected>Lecturer</option>
+                }
+            </select>
+        </div>
+        <div>
+            <span>AccountPassword: </span>
+            <input type="text" asp-for=@Model.AccountPassword />
+        </div>
+        <button type="submit">Save</button>
+    </form>
+
+</div>
+
+

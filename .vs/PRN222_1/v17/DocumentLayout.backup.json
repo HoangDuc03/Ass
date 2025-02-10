@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|c:\\users\\admin\\desktop\\assignment\\prn222_1\\prn222_1\\controllers\\staffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|solutionrelative:prn222_1\\controllers\\staffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|c:\\users\\admin\\desktop\\assignment\\prn222_1\\prn222_1\\views\\staff\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|solutionrelative:prn222_1\\views\\staff\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|c:\\users\\admin\\desktop\\assignment\\prn222_1\\prn222_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD96937E-3FAC-4016-9D4F-D81F064FA4F5}|PRN222_1\\PRN222_1.csproj|solutionrelative:prn222_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StaffController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Controllers\\StaffController.cs",
+              "RelativeDocumentMoniker": "PRN222_1\\Controllers\\StaffController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Controllers\\StaffController.cs",
+              "RelativeToolTip": "PRN222_1\\Controllers\\StaffController.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAcwIYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-09T19:13:14.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Views\\Staff\\Edit.cshtml",
+              "RelativeDocumentMoniker": "PRN222_1\\Views\\Staff\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Views\\Staff\\Edit.cshtml",
+              "RelativeToolTip": "PRN222_1\\Views\\Staff\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-09T23:15:02.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Program.cs",
+              "RelativeDocumentMoniker": "PRN222_1\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Assignment\\PRN222_1\\PRN222_1\\Program.cs",
+              "RelativeToolTip": "PRN222_1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-08T10:46:47.439Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

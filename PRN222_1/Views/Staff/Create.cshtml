@@ -1,0 +1,88 @@
+﻿@{
+    ViewData["Title"] = "Staff Page";
+    
+}
+@model NewsArticle
+<style>
+    textarea {
+        width: 100%;
+        height: 150px;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: vertical; /* Cho phép thay đổi kích thước theo chiều dọc */
+    }
+</style>
+<div>
+    <div>
+        <h1>Create new NewsArticle</h1>
+    </div>
+    <div>
+        <p>@ViewBag.Message</p>
+        <form action="Create" method="post">
+            <div class="form-group">
+                <label for="NewsTitle">NewsTitle: </label>
+                <input type="text" asp-for="NewsTitle">
+            </div>
+            <div class="form-group">
+                <label for="Headline">Headline: </label>
+                <input type="text" asp-for="Headline">
+            </div>
+            <div class="form-group">
+                <label for="NewsContent">NewsContent: </label>
+                <textarea asp-for="NewsContent">
+
+                </textarea>   
+                <!--   -->
+            </div>
+            <div class="form-group">
+                <label for="NewsSource">NewsSource: </label>
+                <input type="text" asp-for="NewsSource">
+            </div>
+            <div class="form-group">
+                <label for="NewsStatus">NewsStatus: </label>
+                <input type="radio" name="Status" value="1" asp-for="NewsStatus"> <span>Active</span>
+                <input type="radio" name="Status" value="0" asp-for="NewsStatus"> <span>Inactive</span>
+                <!--   -->
+            </div>
+
+            <div class="form-group">
+                <label for="Category">Category: </label>
+                <select asp-for="CategoryId">
+                   @foreach(var i in ViewBag.Category)
+					{
+                        <option value="@i.CategoryId">@i.CategoryName</option>
+					}
+                </select>
+                <!--   -->
+            </div>
+            <div class="form-group">
+                <label for="CreatedBy">CreatedBy: </label>
+                <select asp-for="CreatedById">
+                    @foreach (var i in ViewBag.Account)
+                    {
+                        <option value="@i.AccountId">@i.AccountName</option>
+                    })
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Tags">Tags</label>
+                @foreach (var tag in ViewBag.Tags)
+                {
+                    <div>
+                        <input type="checkbox" name="Tags" value="@tag.TagId" id="tag-@tag.TagId" />
+                        <label for="tag-@tag.TagId">@tag.TagName</label>
+                    </div>
+                }
+                
+            </div>
+            <button type="submit" class="">Submit</button>
+        </form>
+    </div>
+    <div style="margin-top: 20px; width: 350px; height :20px">
+        <button>
+            <a asp-action="Index" asp-controller="Staff" class="nav-link text-dark">Back to List NewsArticle</a>
+        </button>
+    </div>
+</div>

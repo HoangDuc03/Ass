@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Admin Page";
+}
+@model List<SystemAccount>
+<div>
+    <h1>Manage account information.</h1>
+</div>
+<div style="margin-bottom: 10px">
+    <button type="button" class="btn btn-primary"><a class="nav-link text-dark" asp-controller="Admin" asp-action="Create">Create new</a></button>
+</div>
+<div class="text-center">
+    <table border="1">
+        <tr>
+            <td>AccountId</td>
+            <td>AccountName</td>
+            <td>AccountEmail</td>
+            <td>AccountRole</td>
+            <td>AccountPassword</td>
+            <td>Action</td>
+        </tr>
+        @foreach(var i in Model)
+        {
+            <tr>
+                <td>@i.AccountId</td>
+                <td>@i.AccountName</td>
+                <td>@i.AccountEmail</td>
+                <td>@i.AccountRole</td>
+                <td>@i.AccountPassword</td>
+                <td style="display: flex"><a class="nav-link text-dark" asp-controller="Admin" asp-action="Edit" asp-route-id=@i.AccountId>Edit</a> <a class="nav-link text-dark" asp-controller="Admin" asp-action="Delete" asp-route-id=@i.AccountId>Delete</a></td>
+            </tr>
+        }
+    </table>
+</div>

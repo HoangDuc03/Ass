@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Staff Page";
+}
+@model List<NewsArticle>
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 3px;
+        max-width: 150px; /* Giới hạn chiều rộng */
+        white-space: nowrap; /* Không xuống dòng */
+        overflow: hidden; /* Ẩn nội dung bị tràn */
+        text-overflow: ellipsis; /* Hiển thị dấu "..." */
+    }
+
+    /*td:hover {
+            overflow: visible;
+            white-space: normal;
+            word-wrap: break-word;
+            background-color: #f9f9f9; 
+    }*/
+    </style>
+<div>
+    <h1>Manage news article.</h1>
+</div>
+<div style="margin-bottom: 10px">
+    <button type="button" class="btn btn-primary"><a class="nav-link text-dark" asp-controller="Staff" asp-action="Create">Create new</a></button>
+</div>
+<div class="text-center">
+    <table border="1px">
+        <tr>
+            <td>NewsArticleId</td>
+            <td>NewsTitle</td>
+            <td>Headline</td>
+            <td>NewsContent</td>
+            <td>NewsSource</td>
+            <td>NewsStatus</td>
+            <td>CategoryId</td>
+            <td>Category</td>
+            <td>CreatedById</td>
+            <td>CreatedDate</td>
+            <td>UpdatedById</td>
+            <td>ModifiedDate</td>
+            <td>CreatedBy</td>
+        </tr>
+        @foreach(var i in Model)
+        {
+            <tr>
+                <td>@i.NewsArticleId</td>
+                <td>@i.NewsTitle</td>
+                <td>@i.Headline</td>
+                <td>@i.NewsContent</td>
+                <td>@i.NewsSource</td>         
+                <td>@i.NewsStatus</td>
+                <td>@i.CategoryId</td>
+                <td>@i.Category.CategoryName</td>
+                <td>@i.CreatedById</td>
+                <td>@i.CreatedDate</td>
+                <td>@i.UpdatedById</td>
+                <td>@i.ModifiedDate</td>
+                <td>@i.CreatedBy.AccountName</td>
+
+
+                <td style="display: flex"><a class="nav-link text-dark" asp-controller="Staff" asp-action="Edit" asp-route-id=@i.NewsArticleId>Edit</a> <a class="nav-link text-dark" asp-controller="Staff" asp-action="Delete" asp-route-id=@i.NewsArticleId>Delete</a></td>
+            </tr>
+        }
+    </table>
+</div>

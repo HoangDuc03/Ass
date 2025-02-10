@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Admin Page";
+    
+}
+@model SystemAccount
+
+<div>
+    <div>
+        <h1>Create new Account</h1>
+    </div>
+    <div>
+        <p>@ViewBag.Message</p>
+        <form action="Create" method="post">
+            <div>
+                <span>AccountName: </span>
+                <input type="text" asp-for="AccountName" />
+            </div>
+            <div>
+                <span>AccountEmail: </span>
+                <input type="text" asp-for="AccountEmail" />
+            </div>
+            <div>
+                <span>AccountPassword: </span>
+                <input type="text" asp-for="AccountPassword" />
+            </div>
+            <div>
+                <span>AccountRole: </span>
+                <select asp-for="AccountRole">
+                    <option value="1">Staff</option>
+                    <option value="2">Lecturer</option>
+                </select>
+            </div>
+            <button type="submit" class="">Submit</button>
+        </form>
+    </div>
+    <div style="margin-top: 20px; width: 350px; height :20px">
+        <button>
+            <a asp-action="Index" asp-controller="Admin" class="nav-link text-dark">Back to List Account</a>
+        </button>
+    </div>
+</div>
