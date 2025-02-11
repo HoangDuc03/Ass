@@ -2,8 +2,31 @@
     ViewData["Title"] = "Admin Page";
 }
 @model List<SystemAccount>
+
 <div>
     <h1>Manage account information.</h1>
+</div>
+<div style="display: flex">
+    <form asp-action="Index" method="post">
+        <div style="margin-left: 5px">
+            <span>AccountName: </span>
+            <input type="text" name="AccountName" />
+        </div>
+        <div style="margin-left: 5px">
+            <span>AccountEmail: </span>
+            <input type="text" name="AccountEmail" />
+        </div>
+        <div style="margin-left: 5px">
+            <span>AccountRole: </span>
+            <select name="AccountRole">
+                <option value="null"></option>
+                <option value="1">Staff</option>
+                <option value="2">Lecturer</option>
+                
+            </select>
+        </div>
+        <button type="submit">Search</button>
+    </form>
 </div>
 <div style="margin-bottom: 10px">
     <button type="button" class="btn btn-primary"><a class="nav-link text-dark" asp-controller="Admin" asp-action="Create">Create new</a></button>

@@ -20,7 +20,25 @@ namespace PRN222_1.Controllers
                            select i;
             return View(listdata.ToList());
         }
-
+        [HttpPost]
+        public IActionResult Index(string AccountName, string AccountEmail, int? AccountRole)
+        {
+            var listdata = from i in context.SystemAccounts
+                           select i;
+            if (AccountName != "" && AccountName != null)
+            {
+                listdata = listdata.Where(x => x.AccountName.Contains(AccountName.Trim()));
+            }
+            if (AccountEmail != "" && AccountEmail != null)
+            {
+                listdata = listdata.Where(x => x.AccountEmail.Contains(AccountEmail.Trim()));
+            }
+            if (AccountRole != null)
+            {
+                listdata = listdata.Where(x => x.AccountRole == AccountRole);
+            }
+            return View(listdata.ToList());
+        }
 
         // GET: AdminController/Create
         public ActionResult Create()
@@ -34,6 +52,17 @@ namespace PRN222_1.Controllers
         {
             try
             {
+                if(model.AccountName == null || model.AccountEmail == null || model.AccountPassword == null)
+                {
+                    this.ViewBag.Message = "An error occurred during creation.";
+                    return View();
+                }
+                var query = context.SystemAccounts.FirstOrDefault(x => x.AccountEmail == model.AccountEmail.Trim());
+                if(query != null)
+                {
+                    this.ViewBag.Message = "Email already exists";
+                    return View();
+                }
                 model.AccountId = (short)(context.SystemAccounts.ToList().Count() + 1);
                 while(true)
                 {
@@ -73,15 +102,34 @@ namespace PRN222_1.Controllers
         {
             try
             {
+                var query = context.SystemAccounts.FirstOrDefault(x => x.AccountEmail == model.AccountEmail.Trim());
+                if (query != null && query.AccountId!= id)
+                {
+                    
+                    this.ViewBag.Message = "Email already exists";
+                    var profile = context.SystemAccounts.FirstOrDefault(x => x.AccountId == id);
+                    return View(profile);
+                }
+                if (model.AccountName == null || model.AccountEmail == null || model.AccountPassword == null)
+                {
+                    this.ViewBag.Message = "Infomation is null.";
+                    var profile = context.SystemAccounts.FirstOrDefault(x => x.AccountId == id);
+                    return View(profile);
+                }
                 model.AccountId = (short)id;
-                context.SystemAccounts.Update(model);
+                var ux = context.SystemAccounts.FirstOrDefault(x=> x.AccountId == id);
+                ux.AccountName = model.AccountName;
+                ux.AccountEmail = model.AccountEmail;
+                ux.AccountPassword = model.AccountPassword;
+                context.SystemAccounts.Update(ux);
                 await context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception e)
             {
                 this.ViewBag.Message = "An error occurred during creation.";
-                return View();
+                var profile = context.SystemAccounts.FirstOrDefault(x => x.AccountId == id);
+                return View(profile);
             }
         }
 

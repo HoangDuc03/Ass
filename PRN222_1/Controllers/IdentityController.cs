@@ -18,11 +18,18 @@ namespace PRN222_1.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(SystemAccount model)
         {
+            if(model.AccountPassword == null || model.AccountEmail == null)
+            {
+                this.ViewBag.Message = "Please enter full information.";
+                return View("Index");
+            }
             var account = _context.SystemAccounts.FirstOrDefault(x => x.AccountEmail == model.AccountEmail && x.AccountPassword == model.AccountPassword);
             this.ViewBag.Message = account == null ? "Invalid email or password." : "Login successful.";
             if (account != null)
             {
                 HttpContext.Session.SetString("Account", account.AccountRole.ToString());
+                HttpContext.Session.SetString("Accountid", account.AccountId.ToString());
+
                 return Redirect(Url.Action("Index", "Home"));
             }
             else
@@ -52,7 +59,8 @@ namespace PRN222_1.Controllers
             if (account != null)
             {
 				HttpContext.Session.Remove("Account");
-			}
+                HttpContext.Session.Remove("Accountid");
+            }
             return Redirect(Url.Action("Index","Home"));
         }
 	}

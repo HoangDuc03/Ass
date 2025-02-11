@@ -1,26 +1,41 @@
 ﻿@{
-	ViewData["Title"] = "Login";
-
+    ViewData["Title"] = "Login";
 }
 @model SystemAccount
-<div>
-	<h1>Login</h1>
-	<form asp-action="Login" method="post">
-		<div>
-			<label for="username">Username</label>
-			<input type="text" asp-for="AccountEmail" />
-		</div>
-		<div>
-			<label for="password">Password</label>
-			<input type="password" asp-for="AccountPassword" />
-		</div>
-		<div>
-			<p>
-				@ViewBag.Message
-			</p>
-		</div>
-		<div>
-			<button type="submit">Login</button>
-		</div>
-	</form>
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="col-md-4">
+        <div class="card shadow-lg">
+            <div class="card-header bg-primary text-white text-center">
+                <h3>Login</h3>
+            </div>
+            <div class="card-body">
+                <form asp-action="Login" method="post">
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                            <input type="email" class="form-control" asp-for="AccountEmail" required />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                            <input type="password" class="form-control" asp-for="AccountPassword" required />
+                        </div>
+                    </div>
+                    <div class="mb-3 text-danger text-center">
+                        <strong>@ViewBag.Message</strong>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success w-100">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- Bootstrap Icons (Chỉ dùng nếu chưa có trong dự án) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
